@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %}Boggle Home{% endblock %}
+
+{% block content %}
+<div>
+    <button id="play-again-button" class="hidden" onClick="window.location.reload(true)">Play again!</button>
+
+</div>
+
+<div id="game">
+    <h5>High Score: <span id="high-score">{{highscore}}</span></h5>
+    <p>You have: <span id="timer">0</span> seconds remaining!</p>
+    <div id="game-board" class="container">
+    {% for row in board %}
+    <div class="row">
+        {% for letter in row%}
+            <div class="letter col-sm">{{letter}}</div>
+        {% endfor %}
+    </div>
+    {% endfor %}
+    </div>
+    <form id="guess-form">
+        <label for="guess">Input your guess here:</label>
+        <input type="text" name="guess" id="guess">
+        <button>Submit!</button>
+    </form>
+    <div id="score">
+        <p>Current Score: <span id="current-score">0</span></p>
+    </div>
+    <div id="results">
+    <p id="guess-results"></p>
+        <h5>Words Found</h5>
+        <ul id="words-found-list">
+        </ul>
+    </div>
+</div>
+
+{% endblock %}

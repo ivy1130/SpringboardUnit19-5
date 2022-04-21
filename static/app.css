@@ -1,0 +1,49 @@
+.hidden {
+	display: none;
+}
+
+#game-board {
+	position: absolute;
+	left: 0px;
+	width: 420px;
+	height: 300px;
+	margin-left: 10px;
+	margin-top: 10px;
+	background-color: #f5f5dc;
+	border-radius: 5px;
+}
+
+.letter {
+	width: 50px;
+	height: 50px;
+	/* background-color: white; */
+	text-align: center;
+	border: black solid 2px;
+	border-radius: 5px;
+	color: black;
+	padding: 10px;
+	margin: 5px;
+}
+
+#guess-form {
+	position: relative;
+	top: 320px;
+	padding: 10px;
+	margin: 5px;
+}
+
+#score,
+#results {
+	position: relative;
+	top: 300px;
+	padding: 10px;
+	margin: 0px 5px;
+}
+
+#score {
+	height: 30px;
+}
+
+/* #score p {
+	display: inline;
+} */
